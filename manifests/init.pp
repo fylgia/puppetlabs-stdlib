@@ -14,7 +14,5 @@
 # Requires: nothing
 #
 class stdlib {
-
-  class { 'stdlib::stages': }
-
+  if ! defined(Class['stdlib::stages']) { class { 'stdlib::stages': } }
 }
